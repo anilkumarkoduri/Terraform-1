@@ -1,0 +1,15 @@
+-------------------- Auto-Git Log --------------------
+		Mon Jan 21 2019 19:29:48 GMT+0530 (IST)
+------------------------------------------------------
+
+Modified files:
+* kubernetes-lab-manager
+
+
+Created files:
+
+
+Deleted files:
+
+
+Renamed files:
