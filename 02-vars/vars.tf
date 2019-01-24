@@ -12,7 +12,7 @@ variable "tags" {
   type = "map"
 
   default = {
-    created_by = "Terraform"
+    created-by = "Terraform"
     Project = "Test"
     Environment = "DEV"
   }
