@@ -5,6 +5,6 @@ resource "aws_vpc" "main" {
     Name = "${var.tags["Project"]}-VPC"  ## <<- We are referring maps 
     Project-Name = "${var.tags["Project"]}"
     Project-ENV = "${var.tags["Environment"]}"
-    Created-By = "${var.tags["created-by"]}"
+    Created-By = "${upper(var.tags["created-by"])}"
   }
 }
