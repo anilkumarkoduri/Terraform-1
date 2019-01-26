@@ -1,2 +1,2 @@
 ENV = "DEV"
-PROJECT_NAME = "STUDENT"
+
