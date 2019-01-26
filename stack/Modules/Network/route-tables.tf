@@ -31,7 +31,7 @@ resource "aws_route_table_association" "public-rt-assoc" {
     route_table_id  = "${aws_route_table.public-rt.id}"
 }
 
-resource "aws_route_table_association" "public-rt-assoc" {
+resource "aws_route_table_association" "private-rt-assoc" {
     count           = "${length(var.PUBLIC_SUBNET_CIDR)}"
     subnet_id       = "${element(aws_subnet.public-subnets.*.id, count.index)}"
     route_table_id  = "${aws_route_table.public-rt.id}"
