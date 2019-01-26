@@ -1,2 +1,6 @@
 variable "ENV" {}
 variable "PROJECT_NAME" {}
+PROJECT_NAME 
+VPC_CIDR     
+SUBNET_CIDR  
+SUBNET_COUNT 
