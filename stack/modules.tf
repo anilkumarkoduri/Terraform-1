@@ -1,4 +1,4 @@
 module "Network" {
   source  = "./Modules/Network"
-  ENV     = "${v}"
+  ENV     = "${var.ENV}"
 }
