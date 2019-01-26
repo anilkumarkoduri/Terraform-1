@@ -4,6 +4,9 @@ resource "aws_subnet" "main" {
     cidr_block      = "${element(var.PUBLIC_SUBNET_CIDR, count.index)}"
 
   tags = {
-   
+    Name            = "${var.PROJECT_NAME}-${var.ENV}-IGW"
+    Project-ENV     = "${var.ENV}"
+    Project-NAME    = "${var.PROJECT_NAME}"
+    Created-By      = "Terraform"
   }
 }
