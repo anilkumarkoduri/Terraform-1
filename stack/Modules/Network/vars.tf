@@ -1,6 +1,6 @@
 variable "ENV" {}
 variable "PROJECT_NAME" {}
-PROJECT_NAME 
-VPC_CIDR     
+variable "PROJECT_NAME" {} 
+variable "VPC_CIDR"   {}
 SUBNET_CIDR  
 SUBNET_COUNT 
