@@ -1,2 +1,4 @@
 variable "ENV" {}
-variable "PROJECT_NAME" 
+variable "PROJECT_NAME" {
+    default = "STUDENT"
+}
