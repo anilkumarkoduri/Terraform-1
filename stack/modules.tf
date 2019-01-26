@@ -4,5 +4,5 @@ module "Network" {
   PROJECT_NAME      = "${var.PROJECT_NAME}"
   VPC_CIDR          = "${var.VPC_CIDR}"
   SUBNET_CIDR       = "${var.SUBNET_CIDR}"
-  
+  SUBNET_COUNT      = "${var.SUBNET_COUNT}"
 }
