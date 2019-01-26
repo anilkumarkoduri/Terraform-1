@@ -1,2 +1,2 @@
 variable "ENV" {}
-PROJECT_NAME = "STUDENT"
+variable "PROJECT_NAME" 
