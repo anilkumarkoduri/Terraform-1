@@ -26,6 +26,7 @@ resource "aws_route_table" "private-rt" {
 }
 
 resource "aws_route_table_association" "public-rt-assoc" {
-  subnet_id      = "${aws_subnet.foo.id}"
+    count = "${}"
+  subnet_id      = ""
   route_table_id = "${aws_route_table.bar.id}"
 }
