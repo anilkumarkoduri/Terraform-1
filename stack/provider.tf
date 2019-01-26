@@ -7,7 +7,7 @@ provider "aws" {
 terraform {
   backend "s3" {
     bucket = "terra-citb34"
-    key    = "sample/terraform.state"
+    key    = "stack/terraform.state"
     region = "us-west-2"
   }
 }
