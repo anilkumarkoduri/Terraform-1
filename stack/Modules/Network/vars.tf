@@ -8,4 +8,3 @@ variable "PUBLIC_SUBNET_CIDR" {
 variable "PRIVATE_SUBNET_CIDR" {
     type = "list"
 }
-variable "SUBNET_COUNT" {}
