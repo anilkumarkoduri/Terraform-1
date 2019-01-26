@@ -1,3 +1,3 @@
-module "network" {
-  source  = "./Modules/proj1-vpc"
+module "Network" {
+  source  = "./Modules/Network"
 }
