@@ -8,7 +8,9 @@ resource "aws_route_table" "public-rt" {
 
 
   tags = {
-    Name = "main"
+    Name            = "${var.PROJECT_NAME}-${var.ENV}-Private-Subnet-${count.index+1}"
+    Project-ENV     = "${var.ENV}"
+    Project-NAME    = "${var.PROJECT_NAME}"
+    Created-By      = "Terraform"
   }
 }
-»
