@@ -4,6 +4,6 @@ module "Network" {
   PROJECT_NAME      = "${var.PROJECT_NAME}"
   VPC_CIDR          = "${var.VPC_CIDR}"
   PRIVATE_SUBNET_CIDR       = "${var.PRIVATE_SUBNET_CIDR}"
-  PUBLIC
+  PUBLIC_SUBNET_CIDR    = "${var.PUBLIC_SUBNET_CIDR}"
   SUBNET_COUNT      = "${var.SUBNET_COUNT}"
 }
