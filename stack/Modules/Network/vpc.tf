@@ -5,7 +5,7 @@ resource "aws_vpc" "main" {
     Name        = "${var.PROJECT_NAME}-${var.ENV}-VPC"
     Project-ENV = "${var.ENV}"
     Project-NAME = "${var.PROJECT_NAME}"
-    Created-By    
+    Created-By    = "Terraform"
   }
 }
 
