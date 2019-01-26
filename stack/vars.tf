@@ -3,7 +3,6 @@ variable "PROJECT_NAME" {
     default = "STUDENT"
 }
 
-variable "SUBNET_COUNT" {}
 
 variable "PUBLIC_SUBNET_CIDR" {
     type = "list"
