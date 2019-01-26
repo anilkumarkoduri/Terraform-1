@@ -5,6 +5,8 @@ variable "PROJECT_NAME" {
 
 variable "SUBNET_COUNT" {}
 
-variable "SUBNET_CIDR" {}
+variable "SUBNET_CIDR" {
+    type = "list"
+}
 
 variable "VPC_CIDR" {}
