@@ -1,5 +1,5 @@
 module "Network" {
   source  = "./Modules/Network"
   ENV     = "${var.ENV}"
-  PROJECT = "${var.PROJECT_NAME}"
+  PROJECT_NAME = "${var.PROJECT_NAME}"
 }
