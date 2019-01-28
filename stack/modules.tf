@@ -15,4 +15,5 @@ module "Network" {
   PROJECT_NAME      = "${var.PROJECT_NAME}"
   VPC_ID            = "${module.Network.vpc_id}"
   PUBLIC_SUBNETS    = "${module.Network.public_subnets}"
+  PUBLIC_SUBNETS    = "${module.Network.public_subnets}"
 }
