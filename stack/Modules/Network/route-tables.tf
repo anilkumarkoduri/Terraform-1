@@ -50,7 +50,7 @@ resource "aws_route_table_association" "private-rt-assoc" {
 ### Adding route of new vpc peer to exiting vpc.
 resource "aws_route" "r" {
   route_table_id            = "rtb-8ecb24f6"
-  destination_cidr_block    = "10.0.1.0/22"
+  destination_cidr_block    = "${var.VPC_CIDR}"
   vpc_peering_connection_id = "pcx-45ff3dc1"
   depends_on                = ["aws_route_table.testing"]
 }
