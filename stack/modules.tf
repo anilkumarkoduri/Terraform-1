@@ -8,3 +8,9 @@ module "Network" {
   MANAGEMENT_VPC        = "${var.MANAGEMENT_VPC}"
   MANAGEMENT_CIDR       = "${var.MANAGEMENT_CIDR}"
 }
+
+module "Network" {
+  source            = "./Modules/Network"
+  ENV               = "${var.ENV}"
+  PROJECT_NAME      = "${var.PROJECT_NAME}"
+}
