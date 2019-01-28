@@ -6,4 +6,6 @@ variable "VPC_ID {}
 variable "PUBLIC_SUBNETS"  {
     type    = "list"
 }
-variable "PRIVATE_SUBNETS" {}
+variable "PRIVATE_SUBNETS" {
+    type    = "list"
+}
