@@ -52,5 +52,4 @@ resource "aws_route" "r" {
   route_table_id            = "rtb-8ecb24f6"
   destination_cidr_block    = "${var.VPC_CIDR}"
   vpc_peering_connection_id = "${aws_vpc_peering_connection.peer.id}"
-  depends_on                = ["aws_route_table.testing"]
 }
