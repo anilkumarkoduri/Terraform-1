@@ -14,4 +14,5 @@ module "Network" {
   ENV               = "${var.ENV}"
   PROJECT_NAME      = "${var.PROJECT_NAME}"
   VPC_ID            = "${module.Network.vpc_id}"
+  PUBLIC_SUBNETS    = ""
 }
