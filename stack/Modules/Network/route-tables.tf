@@ -22,6 +22,11 @@ resource "aws_route_table" "public-rt" {
 resource "aws_route_table" "private-rt" {
   vpc_id = "${aws_vpc.main.id}"
 
+  route {
+    cidr_block = "${var.MANAGEMENT_CIDR}"
+    vpc_peering_connection_id = "${aws_vpc_peering_connection.peer.id}"
+  }
+
   tags = {
     Name            = "${var.PROJECT_NAME}-${var.ENV}-Private-RT"
     Project-ENV     = "${var.ENV}"
