@@ -8,7 +8,7 @@ resource "aws_route_table" "public-rt" {
 
   route {
     cidr_block = "${var.MANAGEMENT_CIDR}"
-    vpc_peering_connection_id = "${aws_pee}"
+    vpc_peering_connection_id = "${aws_vpc_peering_connection.peer.id}"
   }
 
   tags = {
