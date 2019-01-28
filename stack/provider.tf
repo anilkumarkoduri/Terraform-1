@@ -2,7 +2,13 @@ provider "aws" {
   region                  = "us-west-2"
   shared_credentials_file = "/home/centos/.aws/credentails"
   profile                 = "default"
-  #alias                   = "peer"
+}
+
+provider "aws" {
+  alias  = "peer"
+  region = "us-west-2"
+
+  # Accepter's credentials.
 }
 
 terraform {
