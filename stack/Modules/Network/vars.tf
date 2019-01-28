@@ -12,4 +12,4 @@ variable "PRIVATE_SUBNET_CIDR" {
 variable "MANAGEMENT_VPC" {}
 
 variable "MANAGEMENT_CIDR" {} 
-data "aws_availability_zones" "available" {}
+data "aws_availability_zones" "azs" {}
