@@ -10,7 +10,7 @@ module "Network" {
 }
 
 module "Network" {
-  source            = "./Modules/Network"
+  source            = "./Modules/Database"
   ENV               = "${var.ENV}"
   PROJECT_NAME      = "${var.PROJECT_NAME}"
 }
