@@ -1,4 +1,5 @@
 variable "ENV" {}
 variable "PROJECT_NAME" {}
 
-variable ""
+variable "VPC_ID {}
+
