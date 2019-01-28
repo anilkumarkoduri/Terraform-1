@@ -8,7 +8,10 @@ resource "aws_vpc_peering_connection" "peer" {
   auto_accept   = false
 
   tags = {
-    Side = "Requester"
+    Name            = "${var.PROJECT_NAME}-${var.ENV}-Pee"
+    Project-ENV     = "${var.ENV}"
+    Project-NAME    = "${var.PROJECT_NAME}"
+    Created-By      = "Terraform"
   }
 }
 
