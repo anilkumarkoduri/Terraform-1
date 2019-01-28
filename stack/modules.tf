@@ -6,5 +6,5 @@ module "Network" {
   PRIVATE_SUBNET_CIDR       = "${var.PRIVATE_SUBNET_CIDR}"
   PUBLIC_SUBNET_CIDR    = "${var.PUBLIC_SUBNET_CIDR}"
   MANAGEMENT_VPC        = "${var.MANAGEMENT_VPC}"
-  MANAGEMENT_CIDR       = ""
+  MANAGEMENT_CIDR       = "${var.MANAGEMENT_CIDR}"
 }
