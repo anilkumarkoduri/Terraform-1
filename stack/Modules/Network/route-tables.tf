@@ -47,4 +47,4 @@ resource "aws_route_table_association" "private-rt-assoc" {
     route_table_id  = "${aws_route_table.private-rt.id}"
 }
 
-### Adding 
+### Adding route of new vpc peer to exiting vpc.
