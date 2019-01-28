@@ -9,7 +9,7 @@ module "Network" {
   MANAGEMENT_CIDR       = "${var.MANAGEMENT_CIDR}"
 }
 
-module "Network" {
+module "Database" {
   source                = "./Modules/Database"
   ENV                   = "${var.ENV}"
   PROJECT_NAME          = "${var.PROJECT_NAME}"
