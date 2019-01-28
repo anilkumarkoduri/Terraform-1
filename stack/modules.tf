@@ -13,7 +13,7 @@ module "Network" {
   source                = "./Modules/Database"
   ENV                   = "${var.ENV}"
   PROJECT_NAME          = "${var.PROJECT_NAME}"
-  VPC_ID            = "${module.Network.vpc_id}"
-  PUBLIC_SUBNETS    = "${module.Network.public_subnets}"
-  PRIVATE_SUBNETS    = "${module.Network.private_subnets}"
+  VPC_ID                = "${module.Network.vpc_id}"
+  PUBLIC_SUBNETS        = "${module.Network.public_subnets}"
+  PRIVATE_SUBNETS       = "${module.Network.private_subnets}"
 }
