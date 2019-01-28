@@ -8,7 +8,7 @@ resource "aws_route_table" "public-rt" {
 
   route {
     cidr_block = "${var.MANAGEMENT_CIDR}"
-    gateway_id = "${aws_internet_gateway.igw.id}"
+    vpc_peering_connection_id = "${aws_internet_gateway.igw.id}"
   }
   tags = {
     Name            = "${var.PROJECT_NAME}-${var.ENV}-Public-RT"
