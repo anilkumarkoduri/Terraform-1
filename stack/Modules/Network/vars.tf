@@ -8,3 +8,11 @@ variable "PUBLIC_SUBNET_CIDR" {
 variable "PRIVATE_SUBNET_CIDR" {
     type = "list"
 }
+
+variable "MANAGEMENT_VPC" {
+    default = "vpc-948554ed"
+}
+
+variable "MANAGEMENT_CIDR" {
+    default = "172.31.0.0/16"
+} 
