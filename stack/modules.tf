@@ -13,5 +13,5 @@ module "Network" {
   source            = "./Modules/Database"
   ENV               = "${var.ENV}"
   PROJECT_NAME      = "${var.PROJECT_NAME}"
-  VPC_ID            = "${module.Netow}"
+  VPC_ID            = "${module.Network.vpc_id}"
 }
