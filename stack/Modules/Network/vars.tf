@@ -11,5 +11,4 @@ variable "PRIVATE_SUBNET_CIDR" {
 
 variable "MANAGEMENT_VPC" {}
 
-variable "MANAGEMENT_CIDR" {
-} 
+variable "MANAGEMENT_CIDR" {} 
