@@ -1,3 +1,7 @@
+data "aws_caller_identity" "peer" {
+  provider = "aws.peer"
+}
+
 resource "aws_vpc_peering_connection" "peer" {
   vpc_id        = "${aws_vpc.main.id}"
   peer_vpc_id   = "${var.MANAGEMENT_VPC}"
