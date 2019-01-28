@@ -46,3 +46,5 @@ resource "aws_route_table_association" "private-rt-assoc" {
     subnet_id       = "${element(aws_subnet.private-subnets.*.id, count.index)}"
     route_table_id  = "${aws_route_table.private-rt.id}"
 }
+
+### Adding 
