@@ -22,7 +22,7 @@ resource "null_resource" "schema-setup" {
 
   provisioner "local-exec" {
     command = <<EOF
-    mysql 
+    touch /tmp/abc
     EOF
   }
 }
