@@ -17,3 +17,11 @@ resource "aws_db_instance" "default" {
     Created-By      = "Terraform"
   }
 }
+
+resource "null_resource" "cluster" {
+
+  provisioner "local-exec" {
+    # Bootstrap script called with private_ip of each node in the clutser
+    command = "bootstrap-cluster.sh ${join(" ", aws_instance.cluster.*.private_ip)}"
+  }
+}
