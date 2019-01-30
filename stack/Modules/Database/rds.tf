@@ -23,7 +23,7 @@ resource "null_resource" "schema-setup" {
   provisioner "local-exec" {
     command = <<EOF
     curl https://raw.githubusercontent.com/citb34/project-1-documentation/master/studentapp-rds.sql >/tmp/studentapp.sql
-    mysql -h 
+    mysql -h ${aws_db_instance.default.}
     EOF
   }
 }
