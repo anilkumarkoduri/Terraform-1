@@ -22,7 +22,7 @@ resource "null_resource" "schema-setup" {
 
   provisioner "local-exec" {
     command = <<EOF
-    touch /tmp/abc
+    curl 
     EOF
   }
 }
