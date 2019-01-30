@@ -16,4 +16,5 @@ module "Database" {
   VPC_ID                = "${module.Network.vpc_id}"
   PUBLIC_SUBNETS        = "${module.Network.public_subnets}"
   PRIVATE_SUBNETS       = "${module.Network.private_subnets}"
+  DB
 }
