@@ -13,3 +13,4 @@ variable "PRIVATE_SUBNETS" {
 variable "DB_INSTANCE_TYPE" {}
 variable "DBUSER" {}
 variable "DBPASS" {}
+variable "VPC_CIDR" {}
