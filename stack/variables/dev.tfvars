@@ -4,4 +4,5 @@ PUBLIC_SUBNET_CIDR = ["10.0.0.0/24","10.0.1.0/24"]
 PRIVATE_SUBNET_CIDR = ["10.0.2.0/24","10.0.3.0/24"]
 DB_INSTANCE_TYPE = "db.t2.micro"
 DBUSER="student"
-DBPASS="student12"
+DBPASS="student12DEV"
+
