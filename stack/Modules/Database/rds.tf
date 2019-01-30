@@ -5,6 +5,6 @@ resource "aws_db_instance" "default" {
   engine_version       = "10.3"
   instance_class       = "${var.DB_INSTANCE_TYPE}"
   username             = ""
-  password             = "foobarbaz"
+  password             = ""
   parameter_group_name = "default.mysql5.7"
 }
