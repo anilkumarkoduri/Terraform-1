@@ -21,3 +21,5 @@ variable "MANAGEMENT_VPC" {
 variable "MANAGEMENT_CIDR" {
     default = "172.31.0.0/16"
 } 
+
+varible ""
