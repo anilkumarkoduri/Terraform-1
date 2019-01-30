@@ -3,7 +3,7 @@ resource "aws_db_instance" "default" {
   storage_type         = "gp2"
   engine               = "mariadb"
   engine_version       = "10.3"
-  instance_class       = "db.t2.micro"
+  instance_class       = ""
   name                 = "mydb"
   username             = "foo"
   password             = "foobarbaz"
