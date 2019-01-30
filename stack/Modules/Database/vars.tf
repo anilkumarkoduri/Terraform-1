@@ -9,3 +9,5 @@ variable "PUBLIC_SUBNETS"  {
 variable "PRIVATE_SUBNETS" {
     type    = "list"
 }
+
+variable "DB_INSTANCE_TYPE" {}
