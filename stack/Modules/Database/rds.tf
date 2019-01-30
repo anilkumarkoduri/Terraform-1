@@ -8,5 +8,5 @@ resource "aws_db_instance" "default" {
   password             = "${var.DBPASS}"
   parameter_group_name = "${aws_db_parameter_group.default.id}"
   db_subnet_group_name = "${aws_db_subnet_group.default.id}"
-  deletion_protection  
+  deletion_protection  = false
 }
