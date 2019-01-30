@@ -4,8 +4,8 @@ resource "aws_security_group" "rds" {
   vpc_id      = "${var.VPC_ID}"
 
   ingress {
-    from_port   = 0
-    to_port     = 0
+    from_port   = 3306
+    to_port     = 3306
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
@@ -15,6 +15,5 @@ resource "aws_security_group" "rds" {
     to_port         = 0
     protocol        = "-1"
     cidr_blocks     = ["0.0.0.0/0"]
-    prefix_list_ids = ["pl-12c4e678"]
   }
 }
