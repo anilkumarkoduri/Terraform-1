@@ -4,8 +4,7 @@ resource "aws_db_instance" "default" {
   engine               = "mariadb"
   engine_version       = "10.3"
   instance_class       = "${var.DB_INSTANCE_TYPE}"
-  name                 = ""
-  username             = "foo"
+  username             = ""
   password             = "foobarbaz"
   parameter_group_name = "default.mysql5.7"
 }
