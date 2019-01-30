@@ -10,4 +10,10 @@ resource "aws_db_instance" "default" {
   db_subnet_group_name = "${aws_db_subnet_group.default.id}"
   deletion_protection  = false
   identifier           = ""
+  tags = {
+    Name            = "${var.PROJECT_NAME}-${var.ENV}-VPC"
+    Project-ENV     = "${var.ENV}"
+    Project-NAME    = "${var.PROJECT_NAME}"
+    Created-By      = "Terraform"
+  }
 }
