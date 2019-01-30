@@ -7,5 +7,5 @@ resource "aws_db_instance" "default" {
   username             = "${var.DBUSER}"
   password             = "${var.DBPASS}"
   parameter_group_name = "${aws_db_parameter_group.default.id}"
-  db_subnet_group_name = "${aws}"
+  db_subnet_group_name = "${aws_db_subnet_group.default.id}"
 }
