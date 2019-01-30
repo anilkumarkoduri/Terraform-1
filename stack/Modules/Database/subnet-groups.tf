@@ -5,5 +5,5 @@ resource "aws_db_subnet_group" "default" {
 
 resource "aws_db_parameter_group" "default" {
   name   = "rds-studentapp-pg"
-  family = "mysql5.6"
+  family = ""
 }
