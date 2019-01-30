@@ -17,5 +17,6 @@ module "Database" {
   PUBLIC_SUBNETS        = "${module.Network.public_subnets}"
   PRIVATE_SUBNETS       = "${module.Network.private_subnets}"
   DB_INSTANCE_TYPE      = "${var.DB_INSTANCE_TYPE}"
-  DBUSER                = "${var.DB}"
+  DBUSER                = "${var.DBUSER}"
+  DBPASS                = "${var.DBPASS}"
 }
