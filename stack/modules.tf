@@ -19,4 +19,5 @@ module "Database" {
   DB_INSTANCE_TYPE      = "${var.DB_INSTANCE_TYPE}"
   DBUSER                = "${var.DBUSER}"
   DBPASS                = "${var.DBPASS}"
+  VPC_CIDR              = "${var.VPC_CIDR}"
 }
