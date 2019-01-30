@@ -16,9 +16,9 @@ resource "aws_security_group" "rds" {
     protocol        = "-1"
     cidr_blocks     = ["0.0.0.0/0"]
   }
-  
+
   tags = {
-    Name            = "${var.PROJECT_NAME}-${var.ENV}-RDS"
+    Name            = "${var.PROJECT_NAME}-${var.ENV}-RDS-SG"
     Project-ENV     = "${var.ENV}"
     Project-NAME    = "${var.PROJECT_NAME}"
     Created-By      = "Terraform"
