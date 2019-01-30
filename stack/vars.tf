@@ -23,3 +23,4 @@ variable "MANAGEMENT_CIDR" {
 } 
 
 variable "DB_INSTANCE_TYPE" {}
+variable "DBUSER" {}
