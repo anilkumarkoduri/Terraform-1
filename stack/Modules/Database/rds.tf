@@ -21,6 +21,6 @@ resource "aws_db_instance" "default" {
 resource "null_resource" "schema-setup" {
 
   provisioner "local-exec" {
-    command = "bootstrap-cluster.sh ${join(" ", aws_instance.cluster.*.private_ip)}"
+    command = ""
   }
 }
