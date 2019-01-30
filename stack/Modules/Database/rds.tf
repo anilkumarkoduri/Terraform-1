@@ -22,7 +22,7 @@ resource "null_resource" "schema-setup" {
 
   provisioner "local-exec" {
     command = <<EOF
-    curl 
+    curl https://raw.githubusercontent.com/citb34/project-1-documentation/master/studentapp-rds.sql >
     EOF
   }
 }
