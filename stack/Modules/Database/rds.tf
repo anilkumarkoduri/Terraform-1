@@ -9,9 +9,9 @@ resource "aws_db_instance" "default" {
   parameter_group_name = "${aws_db_parameter_group.default.id}"
   db_subnet_group_name = "${aws_db_subnet_group.default.id}"
   deletion_protection  = false
-  identifier           = "${}"
+  identifier           = "${${var.PROJECT_NAME}-${var.ENV}-RDS}"
   tags = {
-    Name            = "${var.PROJECT_NAME}-${var.ENV}-VPC"
+    Name            = "${var.PROJECT_NAME}-${var.ENV}-RDS"
     Project-ENV     = "${var.ENV}"
     Project-NAME    = "${var.PROJECT_NAME}"
     Created-By      = "Terraform"
