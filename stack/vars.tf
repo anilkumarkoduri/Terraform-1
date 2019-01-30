@@ -22,4 +22,4 @@ variable "MANAGEMENT_CIDR" {
     default = "172.31.0.0/16"
 } 
 
-varible "DB_INSTANCE_TYPE" {}
+variable "DB_INSTANCE_TYPE" {}
