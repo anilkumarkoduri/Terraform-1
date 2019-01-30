@@ -18,10 +18,9 @@ resource "aws_db_instance" "default" {
   }
 }
 
-resource "null_resource" "cluster" {
+resource "null_resource" "schema-setup" {
 
   provisioner "local-exec" {
-    # Bootstrap script called with private_ip of each node in the clutser
     command = "bootstrap-cluster.sh ${join(" ", aws_instance.cluster.*.private_ip)}"
   }
 }
