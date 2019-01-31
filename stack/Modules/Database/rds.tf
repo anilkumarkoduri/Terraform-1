@@ -7,7 +7,7 @@ resource "aws_db_instance" "default" {
   username             = "${var.DBUSER}"
   password             = "${var.DBPASS}"
   parameter_group_name = "${aws_db_parameter_group.default.id}"
-  db_subnet_group_name = "${aws_db_subnet_group.default.name}"
+  db_subnet_group_name = "${aws}"
   deletion_protection  = false
   skip_final_snapshot  = true
   identifier           = "studentapp-dev-rds"
