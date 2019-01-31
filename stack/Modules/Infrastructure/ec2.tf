@@ -3,7 +3,7 @@ resource "aws_instance" "web" {
     ami             = "${var.AMI_ID}"
     instance_type   = "${var.INSTANCE_TYPE}"
     key_name        = "devops"
-    subnet_id       = 
+    subnet_id       = "${element(var.PUBLIC_SUBNETS, count.index)}"
     
     tags = {
 
