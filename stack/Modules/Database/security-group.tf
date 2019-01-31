@@ -10,6 +10,13 @@ resource "aws_security_group" "rds" {
     cidr_blocks = ["${var.VPC_CIDR}"]
   }
 
+  ingress {
+    from_port   = 3306
+    to_port     = 3306
+    protocol    = "tcp"
+    cidr_blocks = ["${var.VPC_CIDR}"]
+  }
+
   egress {
     from_port       = 0
     to_port         = 0
