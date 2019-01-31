@@ -25,3 +25,5 @@ variable "MANAGEMENT_CIDR" {
 variable "DB_INSTANCE_TYPE" {}
 variable "DBUSER" {}
 variable "DBPASS" {}
+variable "AMI_ID" {}
+variable "INSTANCE_TYPE" {}
