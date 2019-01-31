@@ -23,7 +23,7 @@ resource "null_resource" "ec2-webapp-setup" {
         private_key = "${file("/home/centos/devops.pem")}"
     }
     inline = [
-            "sudo yum install ansible -y"
-            ]
+        "sudo yum install ansible -y"
+     ] 
     }
 }
