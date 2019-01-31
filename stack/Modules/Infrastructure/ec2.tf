@@ -1,8 +1,9 @@
 resource "aws_instance" "web" {
   ami           = "${var.AMI_ID}"
-  instance_type = "t2.micro"
+  instance_type = "${var.INSTANCE_TYPE}"
+  key_name      = "devops"
 
   tags = {
-    Name = "HelloWorld"
+
   }
 }
