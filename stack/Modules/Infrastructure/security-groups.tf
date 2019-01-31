@@ -39,7 +39,7 @@ resource "aws_security_group" "ec2-sg" {
   }
 
   tags = {
-    Name            = "${var.PROJECT_NAME}-${var.ENV}-RDS-SG"
+    Name            = "${var.PROJECT_NAME}-${var.ENV}-EC2-SG"
     Project-ENV     = "${var.ENV}"
     Project-NAME    = "${var.PROJECT_NAME}"
     Created-By      = "Terraform"
