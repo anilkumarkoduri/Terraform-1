@@ -10,4 +10,4 @@ variable "PRIVATE_SUBNETS" {
     type    = "list"
 }
 
-variable "AMI_ID {}
+variable "AMI_ID" {}
