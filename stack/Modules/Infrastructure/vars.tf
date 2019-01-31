@@ -9,3 +9,5 @@ variable "PUBLIC_SUBNETS"  {
 variable "PRIVATE_SUBNETS" {
     type    = "list"
 }
+
+variable "AMI_ID {}
