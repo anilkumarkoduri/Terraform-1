@@ -11,7 +11,7 @@ resource "aws_db_instance" "default" {
   deletion_protection  = false
   skip_final_snapshot  = true
   identifier           = "studentapp-dev-rds"
-  vpc_security_group_ids    = ["${aws_db_subnet_group.default.id}"]
+  vpc_security_group_ids    = ["${aws_db_subnet_group.rds.id}"]
   tags = {
     Name            = "${var.PROJECT_NAME}-${var.ENV}-RDS"
     Project-ENV     = "${var.ENV}"
