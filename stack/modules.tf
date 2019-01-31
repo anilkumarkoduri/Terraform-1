@@ -30,4 +30,5 @@ module "Infrastructure" {
   PUBLIC_SUBNETS        = "${module.Network.public_subnets}"
   PRIVATE_SUBNETS       = "${module.Network.private_subnets}"
   VPC_CIDR              = "${var.VPC_CIDR}"
+  AMI_ID                = "${var.AMI_ID}"
 }
