@@ -6,5 +6,5 @@ DB_INSTANCE_TYPE = "db.t2.micro"
 DBUSER="student"
 DBPASS="student12DEV"
 AMI_ID="ami-08a274ab0d718e9bb"
-
+INSTANCE_TYPE="t2.micro"
 
