@@ -5,4 +5,6 @@ PRIVATE_SUBNET_CIDR = ["10.0.2.0/24","10.0.3.0/24"]
 DB_INSTANCE_TYPE = "db.t2.micro"
 DBUSER="student"
 DBPASS="student12DEV"
+AMI_ID="ami-08a274ab0d718e9bb"
+
 
