@@ -12,3 +12,17 @@ resource "aws_instance" "web" {
         Created-By      = "Terraform"
   }
 }
+
+resource "null_resource" "ec2-webapp-setup" {
+
+  provisioner "remote-exec" {
+    connection {
+        type     = "ssh"
+        user     = "centos"
+        private_key = "${file("/home/centos/devops.pem")}"
+    }
+    inline = [
+            "sudo yum install ansible -y"
+            ]
+    }
+}
