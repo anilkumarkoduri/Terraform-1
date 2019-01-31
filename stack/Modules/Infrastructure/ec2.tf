@@ -18,6 +18,7 @@ resource "null_resource" "ec2-webapp-setup" {
   provisioner "remote-exec" {
     connection {
         type     = "ssh"
+        host     = "${element(aws_instance.web.*.private_ip, count.index)}"
         user     = "centos"
         private_key = "${file("/home/centos/devops.pem")}"
     }
