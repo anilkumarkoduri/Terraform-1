@@ -13,10 +13,19 @@ resource "aws_instance" "web" {
   }
 }
 
-resource "local_file" "hosts-file" {
-    count = 2
-    content     = "${element(aws_instance.web.*.id, count.index)}"
-    filename = "/tmp/hosts"
+#resource "local_file" "hosts-file" {
+#    count = 2
+#    content     = "${element(aws_instance.web.*.private_ip, count.index)}"
+#    filename = "/tmp/hosts"
+#}
+
+resource "null_resource" "hosts-file" {
+
+  provisioner "local-exec" {
+    command = <<EOF
+    echo "${aws_instance.web.*.public_ip}" >/tmp/hosts
+    EOF
+  }
 }
 
 #resource "null_resource" "ec2-webapp-setup" {
