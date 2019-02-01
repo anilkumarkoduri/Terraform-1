@@ -29,7 +29,7 @@ resource "null_resource" "empty-hosts-file" {
 
 resource "null_resource" "hosts-file" {
     count = 2 
-    depends_on = ["aws"]
+    depends_on = ["aws_instance.web"]
   provisioner "local-exec" {
     command = <<EOF
     echo "${element(aws_instance.web.*.private_ip, count.index)}" >>/tmp/hosts
@@ -54,6 +54,7 @@ resource "null_resource" "hosts-file" {
 
 resource "null_resource" "run-ansible" {
     count = 2 
+    depends_on = ["aws_instance.web"]
   provisioner "local-exec" {
     command = <<EOF
     cd /home/centos/ansible
