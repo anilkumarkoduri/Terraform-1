@@ -13,10 +13,19 @@ resource "aws_instance" "web" {
   }
 }
 
-resource "local_file" "empty-hosts-file" {
-    content     = ""
-    filename = "/tmp/hosts"
+#resource "local_file" "empty-hosts-file" {
+#    content     = ""
+#    filename = "/tmp/hosts"
+#}
+
+resource "null_resource" "empty-hosts-file" {
+    provisioner "local-exec" {
+    command = <<EOF
+    rm -f /tmp/hosts
+    EOF
+  }
 }
+
 
 resource "null_resource" "hosts-file" {
     count = 2 
