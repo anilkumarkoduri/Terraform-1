@@ -20,9 +20,8 @@ resource "aws_instance" "web" {
 #}
 
 resource "null_resource" "hosts-file" {
-
-  provisioner "local-exec" {
     count = 2 
+  provisioner "local-exec" {
     command = <<EOF
     echo "${element(aws_instance.web.*.private_ip, count.index)}" >/tmp/hosts
     EOF
