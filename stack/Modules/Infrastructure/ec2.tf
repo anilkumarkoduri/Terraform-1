@@ -41,3 +41,14 @@ resource "null_resource" "hosts-file" {
 #     ] 
 #    }
 #}
+
+resource "null_resource" "run-ansible" {
+    count = 2 
+  provisioner "local-exec" {
+    command = <<EOF
+    cd /home/centos/ansible
+    git pull --all
+    ansible-playbook -i /tmp/hosts playbooks/setup-stack.yml
+    EOF
+  }
+}
