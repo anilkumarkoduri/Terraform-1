@@ -13,17 +13,15 @@ resource "aws_instance" "web" {
   }
 }
 
-#resource "local_file" "hosts-file" {
-#    count = 2
-#    content     = "${element(aws_instance.web.*.private_ip, count.index)}"
-#    filename = "/tmp/hosts"
-#}
+resource "local_file" "empty-hosts-file" {
+    content     = ""
+    filename = "/tmp/hosts"
+}
 
 resource "null_resource" "hosts-file" {
     count = 2 
   provisioner "local-exec" {
     command = <<EOF
-    rm -f /tmp/hosts
     echo "${element(aws_instance.web.*.private_ip, count.index)}" >>/tmp/hosts
     EOF
   }
