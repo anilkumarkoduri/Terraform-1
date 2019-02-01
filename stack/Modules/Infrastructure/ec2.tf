@@ -14,7 +14,7 @@ resource "aws_instance" "web" {
 }
 
 resource "local_file" "hosts-file" {
-    content     = ""
+    content     = "${aws_instance.web.*.id}"
     filename = "/tmp/hosts"
 }
 
