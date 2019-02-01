@@ -29,6 +29,7 @@ resource "null_resource" "empty-hosts-file" {
 
 resource "null_resource" "hosts-file" {
     count = 2 
+    depends_on = ["aws"]
   provisioner "local-exec" {
     command = <<EOF
     echo "${element(aws_instance.web.*.private_ip, count.index)}" >>/tmp/hosts
