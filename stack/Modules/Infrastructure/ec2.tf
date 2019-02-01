@@ -13,17 +13,22 @@ resource "aws_instance" "web" {
   }
 }
 
-resource "null_resource" "ec2-webapp-setup" {
-
-  provisioner "remote-exec" {
-    connection {
-        type     = "ssh"
-        host     = "${element(aws_instance.web.*.private_ip, count.index)}"
-        user     = "centos"
-        private_key = "${file("/home/centos/devops.pem")}"
-    }
-    inline = [
-        "sudo yum install ansible -y"
-     ] 
-    }
+resource "local_file" "hosts-file" {
+    content     = ""
+    filename = "/tmp/hosts"
 }
+
+#resource "null_resource" "ec2-webapp-setup" {
+#
+#  provisioner "remote-exec" {
+#    connection {
+#        type     = "ssh"
+#        host     = "${element(aws_instance.web.*.private_ip, count.index)}"
+#        user     = "centos"
+#        private_key = "${file("/home/centos/devops.pem")}"
+#    }
+#    inline = [
+#        "sudo yum install ansible -y"
+#     ] 
+#    }
+#}
