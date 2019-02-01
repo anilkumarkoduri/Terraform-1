@@ -14,7 +14,8 @@ resource "aws_instance" "web" {
 }
 
 resource "local_file" "hosts-file" {
-    content     = "${aws_instance.web.*.id}"
+    count = 2
+    content     = "${element(aws_instance.web.*.id, count.index)}"
     filename = "/tmp/hosts"
 }
 
