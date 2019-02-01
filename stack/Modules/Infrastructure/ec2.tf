@@ -53,7 +53,6 @@ resource "null_resource" "hosts-file" {
 #}
 
 resource "null_resource" "run-ansible" {
-    count = 2 
     depends_on = ["aws_instance.web"]
   provisioner "local-exec" {
     command = <<EOF
