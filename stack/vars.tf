@@ -27,3 +27,4 @@ variable "DBUSER" {}
 variable "DBPASS" {}
 variable "AMI_ID" {}
 variable "INSTANCE_TYPE" {}
+variable "DBNAME" {}
