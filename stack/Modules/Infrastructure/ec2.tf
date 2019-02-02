@@ -18,39 +18,22 @@ resource "aws_instance" "web" {
 #    filename = "/tmp/hosts"
 #}
 
-resource "null_resource" "empty-hosts-file" {
-    provisioner "local-exec" {
-    command = <<EOF
-    rm -f /tmp/hosts
-    EOF
-  }
+
+resource "null_resource" "ec2-webapp-setup" {
+
+  provisioner "remote-exec" {
+    connection {
+        type     = "ssh"
+        host     = "${element(aws_instance.web.*.private_ip, count.index)}"
+        user     = "centos"
+        private_key = "${file("/home/centos/devops.pem")}"
+    }
+    inline = [
+        "sudo yum install ansible git -y",
+        "ansible-pull -U https://github.com/citb34/ansible-pull.git setup-stack.yml"
+     ] 
+    }
 }
-
-
-resource "null_resource" "hosts-file" {
-    count = 2 
-    depends_on = ["aws_instance.web"]
-  provisioner "local-exec" {
-    command = <<EOF
-    echo "${element(aws_instance.web.*.private_ip, count.index)}" >>/tmp/hosts
-    EOF
-  }
-}
-
-#resource "null_resource" "ec2-webapp-setup" {
-#
-#  provisioner "remote-exec" {
-#    connection {
-#        type     = "ssh"
-#        host     = "${element(aws_instance.web.*.private_ip, count.index)}"
-#        user     = "centos"
-#        private_key = "${file("/home/centos/devops.pem")}"
-#    }
-#    inline = [
-#        "sudo yum install ansible -y"
-#     ] 
-#    }
-#}
 
 resource "null_resource" "run-ansible" {
     depends_on = ["aws_instance.web"]
