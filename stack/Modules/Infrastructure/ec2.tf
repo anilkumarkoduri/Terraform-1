@@ -30,7 +30,7 @@ resource "null_resource" "ec2-webapp-setup" {
     }
     inline = [
         "sudo yum install ansible git -y",
-        "ansible-pull -U https://github.com/citb34/ansible-pull.git setup-stack.yml -e RDS_ENDPOINT=${var.RDS_ENDPOINT}"
+        "ansible-pull -U https://github.com/citb34/ansible-pull.git setup-stack.yml -e RDS_ENDPOINT=${var.RDS_ENDPOINT} -e "
      ] 
     }
 }
