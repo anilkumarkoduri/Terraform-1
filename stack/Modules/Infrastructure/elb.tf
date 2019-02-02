@@ -2,7 +2,7 @@
 resource "aws_elb" "studentapp-elb" {
   name               = "${var.PROJECT_NAME}-${var.ENV}-clb"
   subnets            = ["${var.PUBLIC_SUBNETS}"]
-  security_groups    = []
+  security_groups    = ["${aws_security_group.elb-sg}"]
 
 
   listener {
