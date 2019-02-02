@@ -46,7 +46,7 @@ resource "aws_security_group" "ec2-sg" {
   }
 }
 
-resource "aws_security_group" "ec2-sg" {
+resource "aws_security_group" "elb-sg" {
   name        = "EC2 Connections"
   description = "EC2 Connections"
   vpc_id      = "${var.VPC_ID}"
