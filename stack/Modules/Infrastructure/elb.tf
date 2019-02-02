@@ -1,5 +1,5 @@
 # Create a new load balancer
-resource "aws_elb" "bar" {
+resource "aws_elb" "studentapp-elb" {
   name               = "foobar-terraform-elb"
   availability_zones = ["us-west-2a", "us-west-2b", "us-west-2c"]
 
