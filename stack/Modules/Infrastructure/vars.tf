@@ -18,7 +18,3 @@ RDS_USERNAME
 RDS_PASSWORD
 RDS_DBNAME
 
-variable
-variable
-variable
-variable
