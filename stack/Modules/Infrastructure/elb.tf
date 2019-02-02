@@ -25,8 +25,8 @@ resource "aws_elb" "studentapp-elb" {
   connection_draining         = true
   connection_draining_timeout = 30
 
-  tags                    = {
-        Name            = "${var.PROJECT_NAME}-${var.ENV}-Instance-${count.index+1}"
+  tags                  = {
+        Name            = "${var.PROJECT_NAME}-${var.ENV}-ELB"
         Project-ENV     = "${var.ENV}"
         Project-NAME    = "${var.PROJECT_NAME}"
         Created-By      = "Terraform"
