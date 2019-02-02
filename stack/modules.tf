@@ -33,8 +33,8 @@ module "Infrastructure" {
   AMI_ID                = "${var.AMI_ID}"
   INSTANCE_TYPE         = "${var.INSTANCE_TYPE}"
   RDS_ENDPOINT          = "${module.Database.rds_endpoint}"
-  RDS_USERNAME          = ""
-  RDS_PASSWORD
+  RDS_USERNAME          = "${var.DBUSER}"
+  RDS_PASSWORD          = ""
   RDS_DBNAME
 }
 
