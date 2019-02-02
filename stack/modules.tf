@@ -35,5 +35,6 @@ module "Infrastructure" {
   RDS_ENDPOINT          = "${module.Database.rds_endpoint}"
   RDS_USERNAME
   RDS_PASSWORD
+  RDS_DBNAME
 }
 
