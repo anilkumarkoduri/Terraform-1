@@ -34,14 +34,3 @@ resource "null_resource" "ec2-webapp-setup" {
      ] 
     }
 }
-
-resource "null_resource" "run-ansible" {
-    depends_on = ["aws_instance.web"]
-  provisioner "local-exec" {
-    command = <<EOF
-    cd /home/centos/ansible
-    git pull --all
-    ansible-playbook -i /tmp/hosts playbooks/setup-stack.yml
-    EOF
-  }
-}
