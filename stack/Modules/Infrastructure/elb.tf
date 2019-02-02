@@ -1,7 +1,7 @@
 # Create a new load balancer
 resource "aws_elb" "studentapp-elb" {
   name               = "${var.PROJECT_NAME}-${var.ENV}-clb"
-  subnets            = ["${var.P}"]
+  subnets            = ["${var.PUBLIC_SUBNETS}"]
 
 
   listener {
