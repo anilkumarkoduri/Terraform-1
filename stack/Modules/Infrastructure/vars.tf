@@ -13,9 +13,7 @@ variable "AMI_ID" {}
 variable "INSTANCE_TYPE" {}
 data "aws_availability_zones" "azs" {}
 
-variable "RDS_ENDPOINT"
-variable "RDS_USERNAME"
-variable "RDS_PASSWORD"
-variable "RDS_DBNAME
-
-"
+variable "RDS_ENDPOINT" {}
+variable "RDS_USERNAME" {}
+variable "RDS_PASSWORD" {}
+variable "RDS_DBNAME"
