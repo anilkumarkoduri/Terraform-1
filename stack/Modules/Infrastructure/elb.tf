@@ -1,6 +1,6 @@
 # Create a new load balancer
 resource "aws_elb" "studentapp-elb" {
-  name               = "foobar-terraform-elb"
+  name               = ""
   availability_zones = ["us-west-2a", "us-west-2b", "us-west-2c"]
 
   access_logs {
