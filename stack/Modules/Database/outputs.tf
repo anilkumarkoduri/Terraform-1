@@ -1,3 +1,3 @@
 output "rds_endpoint" {
-  value = "${aw}"
+  value = "${aws_db_instance.default}"
 }
