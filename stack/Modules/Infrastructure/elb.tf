@@ -13,7 +13,7 @@ resource "aws_elb" "studentapp-elb" {
 
   health_check {
     healthy_threshold   = 1
-    unhealthy_threshold = 2
+    unhealthy_threshold = 1
     timeout             = 3
     target              = "TCP:80"
     interval            = 30
