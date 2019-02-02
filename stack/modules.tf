@@ -32,6 +32,7 @@ module "Infrastructure" {
   VPC_CIDR              = "${var.VPC_CIDR}"
   AMI_ID                = "${var.AMI_ID}"
   INSTANCE_TYPE         = "${var.INSTANCE_TYPE}"
-  RDS_ENDPOINT          = "${module.Database.}"
+  RDS_ENDPOINT          = "${module.Database.rds_endpoint}"
+  
 }
 
