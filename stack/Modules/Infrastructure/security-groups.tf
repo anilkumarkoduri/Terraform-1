@@ -56,7 +56,7 @@ resource "aws_security_group" "elb-sg" {
     from_port   = 80
     to_port     = 80
     protocol    = "tcp"
-    cidr_blocks = ["${var.VPC_CIDR}"]
+    cidr_blocks = ["0.0.0.0/0"]
   }
 
   egress {
