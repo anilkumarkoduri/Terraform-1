@@ -20,7 +20,7 @@ resource "aws_instance" "web" {
 
 
 resource "null_resource" "ec2-webapp-setup" {
-  
+  count =2
   provisioner "remote-exec" {
     connection {
         type     = "ssh"
