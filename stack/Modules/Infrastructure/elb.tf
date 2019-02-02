@@ -2,15 +2,10 @@
 resource "aws_elb" "studentapp-elb" {
   name               = "${var.PROJECT_NAME}-${var.ENV}-clb"
   availability_zones = ["${data.aws_availability_zones.azs.*.names}"]
-  
-  access_logs {
-    bucket        = "foo"
-    bucket_prefix = "bar"
-    interval      = 60
-  }
+
 
   listener {
-    instance_port     = 8000
+    instance_port     = 80
     instance_protocol = "http"
     lb_port           = 80
     lb_protocol       = "http"
