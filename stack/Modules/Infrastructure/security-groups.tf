@@ -67,7 +67,7 @@ resource "aws_security_group" "elb-sg" {
   }
 
   tags = {
-    Name            = "${var.PROJECT_NAME}-${var.ENV}-EC2-SG"
+    Name            = "${var.PROJECT_NAME}-${var.ENV}-ELB-SG"
     Project-ENV     = "${var.ENV}"
     Project-NAME    = "${var.PROJECT_NAME}"
     Created-By      = "Terraform"
