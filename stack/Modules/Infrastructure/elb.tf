@@ -2,7 +2,7 @@
 resource "aws_elb" "studentapp-elb" {
   name               = "${var.PROJECT_NAME}-${var.ENV}-clb"
   availability_zones = ["us-west-2a", "us-west-2b", "us-west-2c"]
-
+"${data.aws_availability_zones.azs.names[count.index]}"
   access_logs {
     bucket        = "foo"
     bucket_prefix = "bar"
