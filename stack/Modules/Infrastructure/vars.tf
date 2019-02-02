@@ -11,3 +11,4 @@ variable "PRIVATE_SUBNETS" {
 }
 variable "AMI_ID" {}
 variable "INSTANCE_TYPE" {}
+data "aws_availability_zones" "azs" {}
