@@ -1,7 +1,7 @@
 # Create a new load balancer
 resource "aws_elb" "studentapp-elb" {
   name               = "${var.PROJECT_NAME}-${var.ENV}-clb"
-  availability_zones = ["${data.aws_availability_zones.azs.names}"]
+  availability_zones = ["${data.aws_availability_zones.azs.*.names}"]
   
   access_logs {
     bucket        = "foo"
