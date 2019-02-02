@@ -47,16 +47,10 @@ resource "aws_security_group" "ec2-sg" {
 }
 
 resource "aws_security_group" "elb-sg" {
-  name        = "EC2 Connections"
-  description = "EC2 Connections"
+  name        = "ELB Connections"
+  description = "ELB Connections"
   vpc_id      = "${var.VPC_ID}"
 
-  ingress {
-    from_port   = 22
-    to_port     = 22
-    protocol    = "tcp"
-    cidr_blocks = ["${var.VPC_CIDR}"]
-  }
 
   ingress {
     from_port   = 80
