@@ -16,4 +16,9 @@ data "aws_availability_zones" "azs" {}
 RDS_ENDPOINT
 RDS_USERNAME
 RDS_PASSWORD
-RDS_DBNAME  
+RDS_DBNAME
+
+variable
+variable
+variable
+variable
