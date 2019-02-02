@@ -23,7 +23,7 @@ resource "aws_elb" "studentapp-elb" {
   cross_zone_load_balancing   = true
   idle_timeout                = 400
   connection_draining         = true
-  connection_draining_timeout = 
+  connection_draining_timeout = 30
 
   tags = {
     Name = "foobar-terraform-elb"
