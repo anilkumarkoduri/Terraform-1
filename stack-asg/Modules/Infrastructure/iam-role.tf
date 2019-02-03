@@ -23,7 +23,7 @@ resource "aws_iam_role" "ec2-role" {
         "s3:PutObjectAcl"
       ],
       "Resource": [
-         "arn:aws:s3:::<s3-bucket-name>/*"
+         "arn:aws:s3:::terra-cit34/*"
       ]
     }
   ]
