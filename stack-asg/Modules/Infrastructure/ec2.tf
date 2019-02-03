@@ -25,23 +25,3 @@ resource "aws_autoscaling_group" "asg" {
   vpc_zone_identifier       = ["${var.PUBLIC_SUBNETS}"]
 
 }
-
-  tag {
-    key                 = "foo"
-    value               = "bar"
-    propagate_at_launch = true
-  }
-
-  timeouts {
-    delete = "15m"
-  }
-
-  tag {
-    key                 = "lorem"
-    value               = "ipsum"
-    propagate_at_launch = false
-  }
-}
-»
-
-
