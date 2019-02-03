@@ -6,7 +6,7 @@ resource "aws_launch_configuration" "launch-config" {
   key_name              = "devops"
   user_data = <<-EOF
               #!/bin/bash
-              sudo yum install ansible git -y
+              sudo yum install ansible git python2-pip -y
               pyth
               EOF
 
