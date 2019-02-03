@@ -1,7 +1,7 @@
 
 resource "aws_iam_role" "web_iam_role" {	    
     name = "web_iam_role"
-    assume_role_policy = <<EOF	
+    assume_role_policy = <<EOF
 {	  
     "Version": "2012-10-17",
     "Statement": [
