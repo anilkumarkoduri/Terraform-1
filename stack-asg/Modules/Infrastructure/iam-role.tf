@@ -10,8 +10,8 @@ resource "aws_iam_role" "web_iam_role" {
             "Principal": {
                 "Service": "ec2.amazonaws.com"
                 },
-                "Effect": "Allow",
-                "Sid": ""
+            "Effect": "Allow",
+            "Sid": ""
         }   
 }	
 EOF
