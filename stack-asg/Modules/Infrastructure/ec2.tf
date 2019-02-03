@@ -7,9 +7,9 @@ resource "aws_launch_configuration" "launch-config" {
   user_data = <<-EOF
               #!/bin/bash
               sudo yum install ansible git python2-pip -y
-              pyth
+              sudo pip install awscli
               EOF
-
+  
 }
 
 
