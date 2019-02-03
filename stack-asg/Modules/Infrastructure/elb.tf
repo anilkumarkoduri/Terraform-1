@@ -20,7 +20,7 @@ resource "aws_elb" "studentapp-elb" {
     interval            = 30
   }
 
-  instances                   = ["${aws_instance.web.*.id}"]
+  #instances                   = ["${aws_instance.web.*.id}"]
   cross_zone_load_balancing   = true
   idle_timeout                = 60
   connection_draining         = true
