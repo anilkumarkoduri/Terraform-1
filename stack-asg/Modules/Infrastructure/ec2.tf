@@ -1,4 +1,11 @@
 
+
+
+
+
+
+
+
 resource "aws_instance" "web" {
     count                   = 2
     ami                     = "${var.AMI_ID}"
