@@ -6,8 +6,7 @@ resource "aws_launch_configuration" "launch-config" {
   key_name              = "devops"
   user_data = <<-EOF
               #!/bin/bash
-              echo "Hello, World" > index.html
-              nohup busybox httpd -f -p 8080 &
+              
               EOF
 
 }
