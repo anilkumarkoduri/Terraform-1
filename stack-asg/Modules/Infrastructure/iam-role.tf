@@ -1,3 +1,5 @@
+
+resource 
 resource "aws_iam_role_policy" "ec2-role" {
   name = "EC2-Access-to-S3-Terraform-Bucket"
   path = "/"
