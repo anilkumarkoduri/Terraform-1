@@ -23,6 +23,6 @@ resource "aws_iam_role" "ec2-role" {
 }
 EOF 
   tags = {
-      tag-key = "tag-value"
+      Name = "EC2-Access-to-S3-Terraform-Bucket"
   }
 }
