@@ -23,7 +23,7 @@ resource "aws_iam_instance_profile" "ec2-profile" {
   roles = ["iam-role-for-ec2"]
 }
 
-resource "aws_iam_role_policy" "ec2-role" {
+resource "aws_iam_role_policy" "ec2-role-policy" {
   name = "EC2-Access-to-S3-Terraform-Bucket"
   path = "/"
   assume_role_policy = <<EOF
