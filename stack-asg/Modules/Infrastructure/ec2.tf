@@ -12,8 +12,8 @@ resource "aws_launch_configuration" "launch-config" {
   security_groups       = ["${aws_security_group.ec2-sg.id}"]
 }
 
-resource "aws_autoscaling_group" "" {
-  name                      = "foobar3-terraform-test"
+resource "aws_autoscaling_group" "asg" {
+  name                      = "studentapp-dev-asg"
   max_size                  = 5
   min_size                  = 2
   health_check_grace_period = 300
