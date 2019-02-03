@@ -1,5 +1,5 @@
-resource "aws_iam_policy" "policy" {
-  name        = "test_policy"
+resource "aws_iam_policy" "s3-access-policy" {
+  name        = "EC2-Accessing-S3-Terraform"
   path        = "/"
   description = "My test policy"
 
