@@ -13,6 +13,7 @@ resource "aws_iam_role" "web_iam_role" {
             "Effect": "Allow",
             "Sid": ""
         }   
+    ]
 }	
 EOF
 }	
