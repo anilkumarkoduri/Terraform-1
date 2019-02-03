@@ -11,7 +11,7 @@ resource "aws_iam_role" "ec2-role" {
         "s3:ListBucket"
       ],
      "Resource": [
-        "arn:aws:s3:::<s3-bucket-name>"
+        "arn:aws:s3:::terra-citb34"
       ]
     },
     {
