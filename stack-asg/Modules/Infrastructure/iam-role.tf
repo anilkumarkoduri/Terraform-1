@@ -12,9 +12,8 @@ resource "aws_iam_role" "web_iam_role" {
                 },
                 "Effect": "Allow",
                 "Sid": ""
-                }
-                
-                }	
+        }   
+}	
 EOF
 }	
 resource "aws_iam_role_policy" "ec2-role" {
