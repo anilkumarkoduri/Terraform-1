@@ -12,7 +12,7 @@ resource "aws_launch_configuration" "launch-config" {
   security_groups       = ["${aws_security_group.ec2-sg.id}"]
 }
 
-resource "aws_autoscaling_group" "bar" {
+resource "aws_autoscaling_group" "" {
   name                      = "foobar3-terraform-test"
   max_size                  = 5
   min_size                  = 2
