@@ -25,7 +25,7 @@ resource "aws_iam_instance_profile" "ec2-profile" {
 
 resource "aws_iam_role_policy" "ec2-role-policy" {
   name = "EC2-Access-to-S3-Terraform-Bucket"
-  role 
+  role = "${aws_}"
   path = "/"
   policy = <<EOF
 {
