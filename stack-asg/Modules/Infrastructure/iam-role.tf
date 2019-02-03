@@ -1,7 +1,7 @@
 resource "aws_iam_policy" "s3-access-policy" {
   name        = "EC2-Accessing-S3-Terraform"
   path        = "/"
-  description = "My test policy"
+  description = "EC2-Accessing-S3-Terraform"
 
   policy = <<EOF
 {
