@@ -22,7 +22,7 @@ resource "aws_autoscaling_group" "asg" {
   force_delete              = true
   #placement_group           = "${aws_placement_group.test.id}"
   launch_configuration      = "${aws_launch_configuration.launch-config.name}"
-  vpc_zone_identifier       = ["${aws_subnet.example1.id}", "${aws_subnet.example2.id}"]
+  vpc_zone_identifier       = ["${var.PU}"]
 
   initial_lifecycle_hook {
     name                 = "foobar"
