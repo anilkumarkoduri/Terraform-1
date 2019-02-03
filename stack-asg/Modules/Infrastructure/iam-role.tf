@@ -2,17 +2,24 @@ resource "aws_iam_role" "ec2-role" {
   name = "EC2-Access-to-S3-Terraform-Bucket"
   assume_role_policy = <<EOF
 {
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Action": "sts:AssumeRole",
-      "Principal": {
-        "Service": "ec2.amazonaws.com"
-      },
-      "Effect": "Allow",
-      "Sid": ""
-    }
-  ]
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": "s3:ListBucket",
+            "Resource": "arn:aws:s3:::terra-citb34"
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": [
+                "s3:GetObject",
+                "s3:PutObjectAcl"
+            ],
+            "Resource": "arn:aws:s3:::terra-citb34/*"
+        }
+    ]
 }
 EOF 
   tags = {
