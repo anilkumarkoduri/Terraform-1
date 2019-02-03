@@ -29,3 +29,7 @@ EOF
   }
 }
 
+resource "aws_iam_instance_profile" "ec2-profile" {
+  name = "test_profile"
+  role = "${aws_iam_role.role.name}"
+}
