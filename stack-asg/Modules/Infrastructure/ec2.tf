@@ -4,7 +4,11 @@ resource "aws_launch_configuration" "launch-config" {
   instance_type         = "${var.INSTANCE_TYPE}"
   iam_instance_profile  = "${aws_iam_instance_profile.ec2-profile.name}"
   key_name              = "devops"
-  
+  user_data = <<-EOF
+              #!/bin/bash
+              echo "Hello, World" > index.html
+              nohup busybox httpd -f -p 8080 &
+              EOF
 
 }
 
