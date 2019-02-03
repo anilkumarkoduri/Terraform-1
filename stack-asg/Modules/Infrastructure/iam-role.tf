@@ -1,5 +1,5 @@
 
-resource "aws_iam_role" "web_iam_role" {	    
+resource "aws_iam_role" "iam_role-for-ec2" {	    
     name = "web_iam_role"
     assume_role_policy = <<EOF
 {	  
