@@ -56,8 +56,5 @@ resource "aws_iam_role_policy" "ec2-role-policy" {
 }
 EOF
 
-  tags = {
-      Name = "EC2-Access-to-S3-Terraform-Bucket"
-  }
 }
 
