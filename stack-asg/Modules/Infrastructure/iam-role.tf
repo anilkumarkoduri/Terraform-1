@@ -14,7 +14,9 @@ resource "aws_iam_role" "web_iam_role" {
                 "Sid": ""
                 }
                 
-                }	EOF	}	
+                }	
+EOF
+}	
 resource "aws_iam_role_policy" "ec2-role" {
   name = "EC2-Access-to-S3-Terraform-Bucket"
   path = "/"
