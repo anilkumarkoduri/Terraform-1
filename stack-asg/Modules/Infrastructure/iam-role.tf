@@ -9,7 +9,8 @@ resource "aws_iam_role" "web_iam_role" {
             "Action": "sts:AssumeRole",
             "Principal": {
                 "Service": "ec2.amazonaws.com"
-                },	      "Effect": "Allow",	      "Sid": ""	    }	  ]	}	EOF	}	
+                },
+                "Effect": "Allow",	      "Sid": ""	    }	  ]	}	EOF	}	
 resource "aws_iam_role_policy" "ec2-role" {
   name = "EC2-Access-to-S3-Terraform-Bucket"
   path = "/"
