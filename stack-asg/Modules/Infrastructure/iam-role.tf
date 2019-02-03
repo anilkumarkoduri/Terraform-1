@@ -20,7 +20,7 @@ EOF
 
 resource "aws_iam_instance_profile" "ec2-profile" {
   name = "ec2-instance-profile-studentapp-dev"
-  roles = [""]
+  roles = ["iam-role-for-ec2"]
 }
 
 resource "aws_iam_role_policy" "ec2-role" {
