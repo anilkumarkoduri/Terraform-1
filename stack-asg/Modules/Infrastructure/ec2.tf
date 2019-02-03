@@ -1,6 +1,6 @@
 resource "aws_launch_configuration" "launch-config" {
-  name          = "web_config"
-  image_id      = "${data.aws_ami.ubuntu.id}"
+  name          = "student-config"
+  image_id      = ""
   instance_type = "t2.micro"
 }
 
