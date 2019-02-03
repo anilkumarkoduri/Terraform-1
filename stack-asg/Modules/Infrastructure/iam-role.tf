@@ -30,6 +30,6 @@ EOF
 }
 
 resource "aws_iam_instance_profile" "ec2-profile" {
-  name = "test_profile"
+  name = "ec2-instance-profile-studentapp-dev"
   role = "${aws_iam_role.role.name}"
 }
