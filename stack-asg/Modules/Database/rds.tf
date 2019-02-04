@@ -34,7 +34,7 @@ resource "null_resource" "db-values-export" {
 
   provisioner "local-exec" {
     command = <<EOF
-    echo -e 
+    echo -e ""
     EOF
   }
 }
