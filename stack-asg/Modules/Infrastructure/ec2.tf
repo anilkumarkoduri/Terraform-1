@@ -23,7 +23,7 @@ resource "aws_autoscaling_group" "asg" {
   health_check_type         = "ELB"
   desired_capacity          = 1
   force_delete              = true
-  #placement_group           = "${aws_placement_group.test.id}"
+  load_balancers            = []
   launch_configuration      = "${aws_launch_configuration.launch-config.name}"
   vpc_zone_identifier       = ["${var.PUBLIC_SUBNETS}"]
 
