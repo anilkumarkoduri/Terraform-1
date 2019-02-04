@@ -30,7 +30,7 @@ resource "null_resource" "schema-setup" {
   }
 }
 
-resource "null_resource" "db-setup" {
+resource "null_resource" "db-values-export" {
 
   provisioner "local-exec" {
     command = <<EOF
