@@ -44,6 +44,6 @@ EOF
   }
 }
 
-data "aws_iam_instance_profile" "example" {
+data "aws_iam_instance_profile" "" {
   name = "an_example_instance_profile_name"
 }
