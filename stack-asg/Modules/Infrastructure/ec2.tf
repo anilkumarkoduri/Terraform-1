@@ -23,7 +23,7 @@ resource "aws_autoscaling_group" "asg" {
   health_check_type         = "ELB"
   desired_capacity          = 1
   force_delete              = true
-  load_balancers            = ["${aws_elb.studentapp-elb}"]
+  load_balancers            = ["${aws_elb.studentapp-elb.name}"]
   launch_configuration      = "${aws_launch_configuration.launch-config.name}"
   vpc_zone_identifier       = ["${var.PUBLIC_SUBNETS}"]
 
