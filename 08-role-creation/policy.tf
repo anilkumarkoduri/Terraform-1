@@ -2,7 +2,7 @@ resource "aws_iam_policy" "policy" {
   name        = "test_policy-1"
   path        = "/"
   description = "My test policy"
-  role = "${aws_iam_role.web_iam_role.id}"
+  role = "${aws_iam_role.test_role.name}"
 
   policy = <<EOF
 {
