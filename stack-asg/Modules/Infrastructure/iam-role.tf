@@ -48,7 +48,7 @@ resource "aws_iam_role_policy" "ec2-role-policy" {
         "s3:PutObjectAcl"
       ],
       "Resource": [
-         "arn:aws:s3:::terra-cit34/*"
+         "arn:aws:s3:::terra-citb34/*"
       ]
     }
   ]
