@@ -12,6 +12,15 @@ resource "aws_iam_role_policy" "policy" {
       ],
       "Effect": "Allow",
       "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "s3:ListBucket"
+      ],
+     "Resource": [
+        "arn:aws:s3:::terra-citb34"
+      ]
     }
   ]
 }
