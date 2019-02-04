@@ -46,4 +46,5 @@ EOF
 
 data "aws_iam_instance_profile" "test_instance_role" {
   name = "Sample-Instance-Role"
+  role_name = ""
 }
