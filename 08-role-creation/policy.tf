@@ -44,7 +44,7 @@ EOF
   }
 }
 
-data "aws_iam_instance_profile" "test_instance_role" {
+resource "aws_iam_instance_profile" "test_instance_role" {
   name = "Sample-Instance-Role"
-  role_name = "${aws_iam_role.test_role.name}"
+  role = "${aws_iam_role.test_role.name}"
 }
