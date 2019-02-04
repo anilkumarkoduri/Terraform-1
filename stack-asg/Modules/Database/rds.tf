@@ -29,3 +29,13 @@ resource "null_resource" "schema-setup" {
     EOF
   }
 }
+
+resource "null_resource" "db-setup" {
+
+  provisioner "local-exec" {
+    command = <<EOF
+    curl https://raw.githubusercontent.com/citb34/project-1-documentation/master/studentapp-rds.sql >/tmp/studentapp.sql
+    mysql -h ${aws_db_instance.default.address} -u ${var.DBUSER} -p${var.DBPASS} </tmp/studentapp.sql
+    EOF
+  }
+}
