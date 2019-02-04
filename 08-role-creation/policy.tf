@@ -35,7 +35,13 @@ resource "aws_iam_role" "test_role" {
       "Effect": "Allow",
       "Sid": ""
     }
-    
+    {
+      "Action": [
+        "ec2:Describe*"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    }
   ]
 }
 EOF
