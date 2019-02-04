@@ -8,7 +8,6 @@ resource "aws_launch_configuration" "launch-config" {
               #!/bin/bash
               sudo yum install ansible git python2-pip -y
               sudo pip install awscli
-              
               EOF
   security_groups       = ["${aws_security_group.ec2-sg.id}"]
 }
