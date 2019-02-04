@@ -34,7 +34,7 @@ resource "null_resource" "db-values-export" {
 
   provisioner "local-exec" {
     command = <<EOF
-    echo -e "RDS_ENDPOINT: -e RDS_USERNAME=${var.RDS_USERNAME} -e RDS_PASSWORD=${var.RDS_PASSWORD} -e RDS_DBNAME=${var.RDS_DBNAME}""
+    echo -e "RDS_ENDPOINT: \n RDS_USERNAME=${var.RDS_USERNAME} -e RDS_PASSWORD=${var.RDS_PASSWORD} -e RDS_DBNAME=${var.RDS_DBNAME}""
     EOF
   }
 }
