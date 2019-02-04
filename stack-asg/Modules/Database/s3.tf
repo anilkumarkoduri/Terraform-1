@@ -5,3 +5,11 @@ resource "aws_s3_bucket_object" "object" {
   #etag   = "${md5(file("path/to/file"))}"
 }
 
+resource "null_resource" "pwd-help" {
+
+  provisioner "local-exec" {
+    command = <<EOF
+    pwd
+    EOF
+  }
+}
