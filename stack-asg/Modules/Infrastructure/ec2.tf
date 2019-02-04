@@ -9,6 +9,7 @@ resource "aws_launch_configuration" "launch-config" {
               sudo yum install ansible git python2-pip -y
               sudo pip install awscli
               aws s3 cp s3://terra-citb34/DB-Details/dev-db-details /tmp/dev-db-details
+              
               EOF
   security_groups       = ["${aws_security_group.ec2-sg.id}"]
 }
