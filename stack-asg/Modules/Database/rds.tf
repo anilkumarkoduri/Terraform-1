@@ -34,7 +34,7 @@ resource "null_resource" "db-values-export" {
 
   provisioner "local-exec" {
     command = <<EOF
-    echo -e "RDS_ENDPOINT:${aws_db_instance.default.address}\nRDS_USERNAME=${var.DBUSER}\nRDS_PASSWORD=${var.DBPASS}\nRDS_DBNAME=${var.DB}"
+    echo -e "RDS_ENDPOINT:${aws_db_instance.default.address}\nRDS_USERNAME=${var.DBUSER}\nRDS_PASSWORD=${var.DBPASS}\nRDS_DBNAME=studentapp"
     EOF
   }
 }
