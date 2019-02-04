@@ -34,8 +34,7 @@ resource "null_resource" "db-values-export" {
 
   provisioner "local-exec" {
     command = <<EOF
-    curl https://raw.githubusercontent.com/citb34/project-1-documentation/master/studentapp-rds.sql >/tmp/studentapp.sql
-    mysql -h ${aws_db_instance.default.address} -u ${var.DBUSER} -p${var.DBPASS} </tmp/studentapp.sql
+    echo -e 
     EOF
   }
 }
