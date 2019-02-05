@@ -26,5 +26,14 @@ resource "aws_autoscaling_group" "asg" {
   load_balancers            = ["${aws_elb.studentapp-elb.name}"]
   launch_configuration      = "${aws_launch_configuration.launch-config.name}"
   vpc_zone_identifier       = ["${var.PUBLIC_SUBNETS}"]
+  depends_on                = ["null_resource.wait-for-db-creation"]
+}
 
+resource "null_resource" "wait-for-db-creation" {
+
+  provisioner "local-exec" {
+    command = <<EOF
+    echo ${var.RDS_ENDPOINT}
+    EOF
+  }
 }
