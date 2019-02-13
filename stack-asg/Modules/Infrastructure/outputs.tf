@@ -1,3 +1,3 @@
 output "elb" {
-  value = "${aws_elb.studentapp-elb}"
+  value = "${aws_elb.studentapp-elb.name}"
 }
