@@ -1,3 +1,3 @@
 output "elb" {
-  value = "${module.}"
+  value = "${module.Infrastructure.elb}"
 }
