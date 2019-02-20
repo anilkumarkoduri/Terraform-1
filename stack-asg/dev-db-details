@@ -1,0 +1,4 @@
+RDS_ENDPOINT: studentapp-dev-rds.ccvctbnwpbw4.us-west-2.rds.amazonaws.com
+RDS_USERNAME: student
+RDS_PASSWORD: student12DEV
+RDS_DBNAME: studentapp
