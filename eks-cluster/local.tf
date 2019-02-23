@@ -4,7 +4,7 @@ resource "null_resource" "example1" {
   provisioner "local-exec" {
     command = <<EOT
       aws eks update-kubeconfig --name ekscluster
-      
+      echo 
       kubectl create -f config.yml
     EOT
   }
