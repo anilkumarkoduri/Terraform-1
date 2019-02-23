@@ -5,7 +5,6 @@ resource "null_resource" "example1" {
     command = <<EOT
       aws eks update-kubeconfig --name ekscluster
       echo "${local.config_map_aws_auth}" 
-      // kubectl create -f config.yml
     EOT
   }
 }
