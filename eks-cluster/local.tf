@@ -4,7 +4,7 @@ resource "null_resource" "example1" {
   provisioner "local-exec" {
     command = <<EOT
       aws eks update-kubeconfig --name ekscluster
-      echo 
+      echo "${local.config_map_aws_auth}"
       kubectl create -f config.yml
     EOT
   }
