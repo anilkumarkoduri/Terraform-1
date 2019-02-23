@@ -11,6 +11,5 @@ resource "null_resource" "example1" {
 
 resource "local_file" "foo" {
     content     = "${local.config_map_aws_auth}"
-    filename = "${path.module}/foo.bar"
+    filename = "/tmp/sample.yml"
 }
-»
