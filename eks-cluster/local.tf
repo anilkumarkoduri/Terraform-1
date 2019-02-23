@@ -8,3 +8,9 @@ resource "null_resource" "example1" {
     EOT
   }
 }
+
+resource "local_file" "foo" {
+    content     = "
+    filename = "${path.module}/foo.bar"
+}
+»
